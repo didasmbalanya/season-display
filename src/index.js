@@ -1,17 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import ReactDom from "react-dom";
+import React, { Component } from "react";
+import { SeasonDisplay } from "./components/SeasonDisplay";
+import { Loader } from "./components/Loader";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class App extends Component {
+  state = {
+    latitude: null,
+    errorMessage: null,
+  };
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  handleLatitudeFetch = () => {
+    window.navigator.geolocation.getCurrentPosition(
+      ({ coords: { latitude } }) => this.setState({ latitude }),
+      (err) => this.setState({ errorMessage: err.message })
+    );
+  };
+  componentDidMount() {
+    this.handleLatitudeFetch();
+  }
+
+  renderContent = () => {
+    if (this.state.errorMessage)
+      return (
+        <div className="errorText">
+          <h1>We can't get you location :( </h1>
+          <br />
+          <h1>Because: {this.state.errorMessage}</h1>
+        </div>
+      );
+    if (!this.state.errorMessage && !this.state.latitude)
+      return <Loader text="Just allow!!! Looool \0/" />;
+    return (
+      <div>
+        <SeasonDisplay latitude={this.state.latitude} />
+      </div>
+    );
+  };
+
+  render() {
+    return <div>{this.renderContent()}</div>;
+  }
+}
+
+ReactDom.render(<App />, document.querySelector("#root"));

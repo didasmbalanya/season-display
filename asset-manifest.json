@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/github.io/season-display/static/css/main.f0b7f4ed.chunk.css",
+    "main.js": "/github.io/season-display/static/js/main.d9328516.chunk.js",
+    "main.js.map": "/github.io/season-display/static/js/main.d9328516.chunk.js.map",
+    "runtime-main.js": "/github.io/season-display/static/js/runtime-main.e137d0b1.js",
+    "runtime-main.js.map": "/github.io/season-display/static/js/runtime-main.e137d0b1.js.map",
+    "static/js/2.e06a4b59.chunk.js": "/github.io/season-display/static/js/2.e06a4b59.chunk.js",
+    "static/js/2.e06a4b59.chunk.js.map": "/github.io/season-display/static/js/2.e06a4b59.chunk.js.map",
+    "index.html": "/github.io/season-display/index.html",
+    "precache-manifest.4179e8b493acea351ef9faeb57b36084.js": "/github.io/season-display/precache-manifest.4179e8b493acea351ef9faeb57b36084.js",
+    "service-worker.js": "/github.io/season-display/service-worker.js",
+    "static/css/main.f0b7f4ed.chunk.css.map": "/github.io/season-display/static/css/main.f0b7f4ed.chunk.css.map",
+    "static/js/2.e06a4b59.chunk.js.LICENSE.txt": "/github.io/season-display/static/js/2.e06a4b59.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e137d0b1.js",
+    "static/js/2.e06a4b59.chunk.js",
+    "static/css/main.f0b7f4ed.chunk.css",
+    "static/js/main.d9328516.chunk.js"
+  ]
+}
